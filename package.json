@@ -1,0 +1,33 @@
+{
+  "name": "rss-reader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "rss-reader": "NODE_ENV=development node index.js",
+    "list-articles": "npm run rss-reader la",
+    "add-feed": "npm run rss-reader af",
+    "list-feeds": "npm run rss-reader lf",
+    "see-description": "npm run rss-reader sd",
+    "read-article": "npm run rss-reader ra",
+    "remove-feed": "npm run rss-reader rf",
+    "build": "NODE_ENV=production pkg . --targets=node8-lin-x64 --out-path=dist/linux",
+    "build:windows-x64": "NODE_ENV=production pkg . --targets=node8-win-x64 --out-path=dist/winx64",
+    "build:windows-x86": "NODE_ENV=production pkg . --targets=node8-win-x86 --out-path=dist/winx86",
+    "build:all": "npm run build && npm run build:windows-x64 && npm run build:windows-x86",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-table": "^0.3.1",
+    "commander": "^2.19.0",
+    "feedparser": "^2.2.9",
+    "inquirer": "^6.2.0",
+    "request": "^2.88.0",
+    "striptags": "^3.1.1"
+  }
+}
