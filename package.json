@@ -12,6 +12,7 @@
     "see-description": "npm run rss-reader sd",
     "read-article": "npm run rss-reader ra",
     "remove-feed": "npm run rss-reader rf",
+    "help": "npm start -- --help",
     "build": "NODE_ENV=production pkg . --targets=node8-lin-x64 --out-path=dist/linux",
     "build:windows-x64": "NODE_ENV=production pkg . --targets=node8-win-x64 --out-path=dist/winx64",
     "build:windows-x86": "NODE_ENV=production pkg . --targets=node8-win-x86 --out-path=dist/winx86",
